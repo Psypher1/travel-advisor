@@ -7,13 +7,19 @@ import { CssBaseline, Grid } from "@material-ui/core";
 
 const App = () => {
   return (
-    <div>
-      <h1>WE HAVE BEGUN</h1>
+    <>
+      <CssBaseline />
       <Header />
-      <List />
-      <Map />
-      <PlaceDetails />
-    </div>
+      <Grid container spacing={3} style={{ width: "100%" }}>
+        <Grid item xs={12} md={4}>
+          <List />
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <Map />
+        </Grid>
+      </Grid>
+      {/* <PlaceDetails /> */}
+    </>
   );
 };
 
